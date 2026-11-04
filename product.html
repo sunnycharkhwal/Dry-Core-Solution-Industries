@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product | Dry Core Solution Industries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Company name (simple centered heading, no navbar/header) -->
+  <p class="company-name" role="heading" aria-level="2">Dry Core Solution Industries</p>
+
+  <main class="container pb-5">
+    <a class="back-link" href="index.html"><span aria-hidden="true">&lsaquo;</span> Back to Products</a>
+
+    <!-- Populated from the products array in js/script.js using ?id= -->
+    <article class="row g-4 g-lg-5 align-items-start" id="product" aria-live="polite">
+      <noscript><div class="col-12"><p class="alert alert-warning">Product details need JavaScript. Please enable it, or return to the <a href="index.html">product list</a>.</p></div></noscript>
+
+      <div class="col-12 col-lg-5">
+        <figure class="detail-media mb-3">
+          <img id="p-img" src="" alt="" width="800" height="600">
+        </figure>
+        <div class="text-center">
+          <a id="p-photos" class="btn btn-photos" href="#" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Get More Photos</a>
+          <p class="interested mt-4 mb-2">Interested in this product?</p>
+          <a id="p-quote" class="btn btn-quote" href="#">Get Best Quote</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7">
+        <h1 id="p-name" class="detail-title">Loading…</h1>
+        <p class="price-line"><span class="price"><span aria-hidden="true">₹</span><span class="visually-hidden">Rupees</span> <span id="p-price"></span></span><span class="unit" id="p-unit"></span> <a id="p-latest" class="latest-price" href="#">Get Latest Price</a></p>
+        <p id="p-moq" class="moq" hidden>Minimum Order Quantity: <strong id="p-moq-val"></strong></p>
+        <div class="table-responsive spec-wrap">
+          <table class="table spec-table mb-0">
+            <caption class="visually-hidden">Product specifications</caption>
+            <tbody id="p-specs"></tbody>
+          </table>
+        </div>
+        <p id="p-desc" class="detail-desc"></p>
+        <div class="cta-row">
+          <a id="p-call" class="btn btn-call" href="#">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Call Now</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
