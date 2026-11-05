@@ -14,9 +14,24 @@ img{max-width:100%;height:auto}
 a:focus-visible,.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .skip-link{position:absolute;left:.5rem;top:.5rem;z-index:10;background:#fff;padding:.5rem 1rem}
 /* ===== 3. Company name (top, centered, not a navbar) ===== */
-.company-name{font-size:var(--fs-company);font-weight:700;text-align:center;margin:0;padding:1.5rem 1rem 1rem;line-height:1.2;overflow-wrap:anywhere}
-.section-title{font-size:clamp(1.15rem,1rem + .8vw,1.6rem);font-weight:600;text-align:center;margin:1rem 0 1.75rem}
+.company-name{font-size:var(--fs-company);font-weight:700;text-align:center;margin:0;padding:1.5rem 1rem 1rem;line-height:1.2;overflow-wrap:anywhere;color:#fff;letter-spacing:.01em}
+.section-title{font-size:clamp(1.15rem,1rem + .8vw,1.6rem);font-weight:600;text-align:center;margin:.5rem 0 1.75rem}
 .section-title::after{content:"";display:block;width:3.5rem;height:.2rem;margin:.5rem auto 0;background:var(--accent);border-radius:2px}
+/* ===== 3b. Top band with contact details ===== */
+.top-band{background:linear-gradient(135deg,var(--brand-dark),var(--brand) 60%,#12527d);border-bottom:.3rem solid var(--accent);padding-bottom:1.25rem;margin-bottom:1.25rem}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:.75rem;margin:0}
+.contact-item{display:flex;align-items:flex-start;gap:.75rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:.8rem 1rem;color:#fff;min-width:0}
+.contact-icon{flex:none;color:var(--accent);margin-top:.15rem}
+.contact-label{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#ffd47a;font-weight:600;margin-bottom:.15rem}
+.contact-value{display:block;font-size:.95rem;font-style:normal;line-height:1.45;overflow-wrap:anywhere}
+.contact-value a{color:#fff;text-decoration:none;font-weight:600}
+.contact-value a:hover{text-decoration:underline}
+.contact-item--gst{background:var(--accent);border-color:var(--accent);color:#1c1f26}
+.contact-item--gst .contact-icon,.contact-item--gst .contact-label{color:#5a3b00}
+.contact-item--gst .contact-value{font-weight:700;letter-spacing:.03em}
+@media (min-width:576px){.contact-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1200px){.contact-grid{grid-template-columns:1.3fr .8fr 1.3fr .9fr}}
+
 /* ===== 4. Listing cards ===== */
 .product-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
 .product-card__media{display:block;aspect-ratio:4/3;background:#fff;overflow:hidden}
